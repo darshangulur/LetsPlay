@@ -85,12 +85,12 @@ root.right?.data
 
 print("In order")
 Node.inOrderTraversal(node: root)
-//
-//print("\nPre Order")
-//Node.preOrderTraversal(node: root)
-//
-//print("\nPost order")
-//Node.postOrderTraversal(node: root)
+
+print("\nPre Order")
+Node.preOrderTraversal(node: root)
+
+print("\nPost order")
+Node.postOrderTraversal(node: root)
 
 
 
