@@ -1,16 +1,20 @@
 class Solution {
     func getSum(_ a: Int, _ b: Int) -> Int {
-        let sum = a * a + b * b + 2 * a * b
+        var x = a, y = b
         
-        var isNegative = false
-        if abs(a) > abs(b) {
-            isNegative = a < 0
-        } else {
-            isNegative = b < 0
+        while y != 0 {
+            let carry = x & y
+            
+            x = x ^ y
+            y = carry << 1
         }
         
-        return Int(Double(sum).squareRoot()) * (isNegative ? -1 : 1)
+        return x
     }
 }
 
 Solution().getSum(2, -1)
+
+let y = 8
+y << 1
+y >> 1
