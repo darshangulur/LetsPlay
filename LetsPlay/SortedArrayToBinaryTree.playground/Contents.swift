@@ -79,6 +79,14 @@ class Solution {
         
         return root
     }
+    
+    func inOrderTraversal(root: TreeNode?) {
+        guard root != nil else { return }
+        
+        inOrderTraversal(root: root?.left)
+        print("\(root?.val ?? -100)", terminator: " ")
+        inOrderTraversal(root: root?.right)
+    }
 }
 
 let node0 = TreeNode(0)
@@ -88,7 +96,10 @@ let node9 = TreeNode(9)
 let node5 = TreeNode(5)
 
 let tree = Solution()
-tree.sortedArrayToBST([-10,-3,0,5,9])?.val
+let root = tree.sortedArrayToBST([-10,-3,0,5,9])
+root?.val
 
 tree.sortedArrayToBST([])
 tree.sortedArrayToBST([9])?.val
+
+tree.inOrderTraversal(root: root)
