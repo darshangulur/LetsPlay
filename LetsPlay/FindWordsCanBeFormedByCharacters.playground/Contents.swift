@@ -40,3 +40,5 @@ class Solution {
         return numberOfCharacters
     }
 }
+
+Solution().countCharacters(["cat","bt","hat","tree"], "atach")
