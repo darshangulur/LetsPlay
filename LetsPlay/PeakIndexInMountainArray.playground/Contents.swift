@@ -1,7 +1,7 @@
 class Solution {
     func peakIndexInMountainArray(_ A: [Int]) -> Int {
         var index = 0
-        var count = A.count
+        let count = A.count
         while index < count-1 {
             if A[index+1] < A[index] {
                 return index
