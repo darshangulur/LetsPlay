@@ -6,7 +6,7 @@ class Solution {
             let row = grid[rowIndex]
             for columnIndex in 0..<row.count {
                 if rowIndex == 0, columnIndex == 0 {
-                    
+                    // do nothing, could assign value to itself but unnecessary
                 } else {
                     let minimumRow = rowIndex-1 >= 0 ? grid[rowIndex-1][columnIndex] : Int.max
                     let minimumColumn = columnIndex-1 >= 0 ? grid[rowIndex][columnIndex-1] : Int.max
